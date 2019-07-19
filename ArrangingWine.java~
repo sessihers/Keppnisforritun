@@ -1,0 +1,13 @@
+import java.util.Scanner;
+
+public class ArrangingWine
+{
+  public static void main(String [] args)
+  {
+    Scanner sc = new Scanner(System.in);
+    int R = sc.nextInt();
+    int W = sc.nextInt();
+    int d = sc.nextInt();
+    
+  }
+}

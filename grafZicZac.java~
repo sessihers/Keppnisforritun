@@ -1,0 +1,20 @@
+import java.util.Scanner;
+
+public class grafZicZac
+{
+  public static void main(String [] args)
+  {
+    Scanner sc = new Scanner(System.in());
+    int n = readInt();
+    StdDraw.setXscale(-1, n);
+    StdDraw.setYscale(0, 10);
+    double prev = 0;
+    while(!StdIn.isEmpty())
+    {
+      double y = sc.readDouble();
+      StdDraw.point(i, y);
+      StdDraw.line(i-1, prev, i, x);
+      prev = y;
+    }
+  }
+}

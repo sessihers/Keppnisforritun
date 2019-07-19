@@ -1,0 +1,65 @@
+import java.util.Scanner;
+
+public class queens
+{
+  public static void main(String [] args)
+  {
+    Scanner sc = new Scanner(system.in);
+    int n = 0, m = 0, i = 0, x = 0, y = 0;
+    n = sc.nextInt();
+    m = sc.nextInt();
+    i = sc.nextInt();
+    int sum = n*m;
+    short [][] a = new short[n][m];
+    /*for(int t = 0; t < n; t++)
+    {
+      for(int j = 0; j < m; j++)
+      {
+        a[t][j] = 1;
+      }
+    }*/
+    for(int t = 0; t < i; t++)
+    {
+      x = sc.nextInt();
+      y = sc.nextInt();
+      x--;
+      y--;
+      //lina
+      for(int j = 0; j < m; j++)
+      {
+        a[x][j] = 1;
+      }
+      //dalkur
+      for(int j = 0; j < n; j++)
+      {
+        a[j][y] = 1;
+      }
+      //hornalina
+      for(int j = 0; j < Math.min(x + 1, y + 1); j++)
+      {
+        a[x-j][y-j] = 1;
+      }
+      for(int j = 0; j < Math.min(x + 1, m-y); j++)
+      {
+        a[x-j][y+j] = 1;
+      }
+      for(int j = 0; j < Math.min(n-x, y + 1); j++)
+      {
+        a[x+j][y-j] = 1;
+      }
+      for(int j = 0; j < Math.min(n-x, m-y); j++)
+      {
+        a[x+j][y+j] = 1;
+      }
+    }
+    for(int t = 0; t < n; t++)
+    {
+      for(int j = 0; j < m; j++)
+      {
+        sum -= a[t][j];
+      }
+    }
+    cout << sum << endl;
+    
+  }
+}
